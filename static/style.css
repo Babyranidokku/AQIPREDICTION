@@ -1,0 +1,119 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Light grey background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 1rem; /* Reduced container padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: green;
+    font-size: 1.8rem; /* Slightly smaller font size */
+}
+
+/* Grid layout for pollutants */
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Smaller 4-column grid layout */
+    gap: 0.8rem; /* Smaller gap between boxes */
+}
+
+/* Individual pollutant card styling */
+.form-group {
+    background: #f5f5f5; /* Light card background */
+    border-left: 4px solid #28a745; /* Smaller left border */
+    border-radius: 5px; /* Reduced border radius */
+    padding: 0.4rem; /* Smaller padding inside the boxes */
+    min-height: 20px; /* Smaller height */
+    min-width: 40px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Border colors based on criticality */
+.form-group.warning {
+    border-left-color: #ffc107; /* Yellow for warnings */
+}
+
+.form-group.danger {
+    border-left-color: #dc3545; /* Red for critical levels */
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    font-size: 0.8rem; /* Smaller label font size */
+    color: #333;
+}
+
+/* Input styling */
+input {
+    margin-top: 0.2rem;
+    font-size: 0.9rem; /* Slightly smaller font */
+    color: #555;
+    border: none;
+    width: 150px;
+    background: transparent;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Units (like µg/m³, ppb) */
+.unit {
+    font-size: 0.7rem; /* Smaller unit text size */
+    color: #777;
+    margin-top: 0.1rem;
+}
+
+/* Hover effect for pollutant boxes */
+.form-group:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button styling */
+button {
+    grid-column: span 4; /* Spans across 4 columns */
+    padding: 0.5rem; /* Reduced padding */
+    background-color: green;
+    color: #ffffff;
+    font-size: 0.9rem; /* Smaller font */
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: green; /* Darker blue on hover */
+}
+
+/* Output section */
+#output {
+    margin-top: 1.2rem;
+    font-size: 1rem; /* Smaller font */
+    font-weight: bold;
+    color: green;
+    text-align: center;
+}
